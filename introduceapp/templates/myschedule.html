@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href = "{% static 'css/myschedule.css' %}">
+    <title>2022_1 시간표</title>
+</head>
+<body>
+    <h1>시간표 - 201814113 전지윤</h1>
+    <table border ="1">
+        <tr>
+            <th></th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+        </tr>
+        <tr>
+            <td rowspan="2">9시</td>
+            <td style = "background: rgb(252, 182, 208);" rowspan="6">데이터베이스<br>홍은지<br>9:00~11:50<br>6202<br>lms 녹화강의</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">10시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">11시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">12시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style = "background : rgb(255, 185, 196);" rowspan="6">경영전략<br>박성순<br>12:00~2:50<br>9999<br>실시간zoom강의</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">1시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">2시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">3시</td>
+            <td style = "background : rgb(252, 213, 239);" rowspan="3">프론트엔드개발<br>이승진<br>3:00~4:15<br>6202</td>
+            <td style = "background : rgb(254, 230, 233)" rowspan="3">알고리즘<br>노은하<br>3:00~4:15<br>6202</td>
+            <td style = "background : rgb(252, 213, 239);" rowspan="3">프론트엔드개발<br>이승진<br>3:00~4:15<br>6202</td>
+            <td style = "background : rgb(254, 230, 233);" rowspan="3">알고리즘<br>노은하<br>3:00~4:15<br>6202</td>
+            <td style = "background : rgb(250, 199, 199);" rowspan="6">빅데이터<br>장진웅<br>3:00~5:50<br>9999<br>실시간zoom강의</td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <td rowspan="2">4시</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style = "background : rgb(253, 202, 210);" rowspan="3">기업재무관리<br>최우석<br>4:30~5:45<br>7208</td>
+            <td></td>
+            <td style = "background : rgb(253, 202, 210)" rowspan="3">기업재무관리<br>최우석<br>4:30~5:45<br>7208</td>
+        </tr>
+        <tr>
+            <td rowspan="2">5시</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2">6시</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <button onclick="location.href='bootstrap.html'">Home</button >
+
+        {% extends ‘footer.html’ %}
+            {% block nav%}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                <div class="shadow-sm p-3 mb-5 bg-body rounded"> <!----shadow부트스트랩 사용-->
+                  <a class="navbar-brand" href="#">페이지 목록</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'test' %}">HTML/CSS PAGE</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'myschedule' %}">SCHEDULE PAGE</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'grid' %}">GALLERY PAGE</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account' %}">ACCOUNT PAGE</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              {% endblock %}
+</body>
+</html>

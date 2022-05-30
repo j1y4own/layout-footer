@@ -1,0 +1,162 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href = "{% static 'css/test.css' %}">
+        <title></title>
+    </head>
+    <body>
+        <header>
+            <h1>전지윤의 홈페이지</h1>
+        </header>
+        <hr>
+        <nav>
+            <div id="box">
+            <h2>기본 정보</h2>
+            <hr>
+            <o1>
+                    소속
+                        <ul>
+                            <li>성공회대학교</li>
+                            <li>IT융합자율학부</li>
+                            <li>소프트웨어학과&경영학과</li>
+                            <li>성공회대 멋쟁이 아기사자 10기<br>(조지미:^^조세은^^)</li>
+                        </ul>
+                    </li>
+                    </o1>
+            <o2>
+                좋아하는 콘텐츠
+                <ul>
+                    <li>라라랜드</li>
+
+                    <li>미스터션샤인</li>
+                </ul>
+            </o2>
+        </div>
+        </nav>
+
+        <section>
+            <article>
+                <h2>My Profile</h2>
+                <form action="전송받을 대상">
+                    아이디 : <input type = "text" name="myid">
+                    비밀번호 : <input type="password" name="mypw">
+                    </form>
+                    <a href="https://www.instagram.com/j.1y4_own/">insta profile</a>
+                </article>
+            <br>
+            <article>
+                <h2>이력</h2>
+                <table>
+                    <thead>
+                        <th>년도</th>
+                        <th>이력 내용</th>
+                    </thead>
+                    <tbody>
+                        <tr><!--첫번째 줄-->
+                            <td>2022년도</td>
+                            <td>성공회대학교 멋쟁이사자처럼 10기 아기사자</td>
+                        </tr>
+                        <tr><!--첫번째 줄-->
+                            <td>2023년도</td>
+                            <td> 성공회대 졸업</td>
+                        </tr>
+                        <tr><!--첫번째 줄-->
+                            <td>2023년도</td>
+                            <td>우아한 형제들 부스트캠프 수료</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <br>
+
+            <article>
+                <h2>좋아하는 것</h2>
+                <p>
+                    <b>노래틀어놓기</b>
+                    <table border="1">
+                        <tr>
+                            <th>Artists</th>
+                            <th>Title</th>
+                        </tr>
+                        <tr>
+                            <td>Khalid</td>
+                            <td>Skyline</td>
+                        </tr>
+                        <tr>
+                            <td>Bennett</td>
+                            <td>Give Me A Reason</td>
+                        </tr>
+                        <tr>
+                            <td>Troye Sivan</td>
+                            <td>Strawberries & Cigarettes</td>
+                        </tr>
+                    </table>
+                    <b>여행/혼자 돌아다니기</b>
+                    <br>
+                    <b>책방가서책읽기</b>
+                    <br>
+                    <b>전시회 다니기</b>
+                </p>
+            <article>
+                <h2>경험</h2>
+                <p>
+                    <b>유럽여행,</b>
+                    <b>타연합동아리 운영진,</b>
+                    <b>도미노 피자 노예</b>
+                </p>
+            <blockquote>
+                    <i>"배는 항구에 있을 때 가장 안전하다</i>
+                    <i>그러나 그것은 배의 존재 이유가 아니다"</i>
+                </blockquote>
+            </article>
+
+            </section>
+
+            <button onclick="location.href='bootstrap.html'">Home</button >
+
+            <br>
+            <hr>
+
+            <footer>
+                Copyright &copy; 성공회대학교 멋쟁이 사자처럼 10기
+            </footer>
+        </section>
+
+    {% extends ‘footer.html’ %}
+    {% block nav%}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        <div class="shadow-sm p-3 mb-5 bg-body rounded"> <!----shadow부트스트랩 사용-->
+          <a class="navbar-brand" href="#">페이지 목록</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'test' %}">HTML/CSS PAGE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'myschedule' %}">SCHEDULE PAGE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'grid' %}">GALLERY PAGE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account' %}">ACCOUNT PAGE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      {% endblock %}
+
+    </body>
+</html>
